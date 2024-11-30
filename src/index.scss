@@ -1,0 +1,15 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none; // Removes underline
+  color: inherit; // Gets the parent's color
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow: hidden; // If anything in body overflows, that part is hidden
+}

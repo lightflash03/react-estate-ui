@@ -1,0 +1,31 @@
+@use "./responsive" as responsive;
+
+.layout {
+    background-color: purple;
+    height: 100vh;
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    // First Large, then Medium, then Small
+    // OR, Mobile First approach can also be used
+    @include responsive.large {
+        background-color: blue;
+        max-width: 1100px;
+    }
+
+    @include responsive.medium {
+        background-color: green;
+        max-width: 900px;
+    }
+
+    @include responsive.small {
+        background-color: red;
+        max-width: 600px;
+    }
+}
+
+// We'll have 3 breakpoints for 3 different screen sizes: Small, Medium, Large
+// Each has its own different width

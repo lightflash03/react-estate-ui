@@ -1,0 +1,20 @@
+@mixin small { // Creates a sass function for small screens
+    // media query
+    @media (max-width: 740px) {
+        @content;
+    }
+}
+
+@mixin medium { // Creates a sass function for small screens
+    // media query
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin large { // Creates a sass function for small screens
+    // media query
+    @media (max-width: 1250px) {
+        @content;
+    }
+}
