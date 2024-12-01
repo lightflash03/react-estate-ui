@@ -11,17 +11,17 @@
     // First Large, then Medium, then Small
     // OR, Mobile First approach can also be used
     @include responsive.large {
-        background-color: blue;
+        background-color: rgb(87, 208, 255);
         max-width: 1100px;
     }
 
     @include responsive.medium {
-        background-color: green;
+        background-color: rgb(118, 248, 118);
         max-width: 900px;
     }
 
     @include responsive.small {
-        background-color: red;
+        background-color: rgb(255, 198, 92);
         max-width: 600px;
     }
 }
