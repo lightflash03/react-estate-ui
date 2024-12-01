@@ -1,0 +1,53 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+
+    a {
+        // Applies a smooth transition effect to all properties that change on the element. ease - smooth acceleration and deceleration
+        transition: all 0.3s ease; 
+        &:hover {
+            scale: 1.05;
+        }
+    }
+
+    .left {
+        flex: 3; // Occupies 60% of the navbar
+
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .logo {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        img {
+            width: 30px;
+        }
+    }
+    .right {
+        flex: 2; // Occupies 40% of the navbar
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 25px;
+        background-color: aquamarine;
+        height: 100%;
+
+        a {
+            margin: 20px;
+            padding: 12px 12px;
+        }
+
+        .register {
+            background-color: gold;
+        }
+    }
+}
