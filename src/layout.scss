@@ -1,29 +1,35 @@
 @use "./responsive" as responsive;
 
 .layout {
-    height: 100vh;
-    max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  height: 100vh;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
 
-    // First Large, then Medium, then Small
-    // OR, Mobile First approach can also be used
-    @include responsive.large {
-        background-color: rgb(87, 208, 255);
-        max-width: 1100px;
-    }
+  // First Large, then Medium, then Small
+  // OR, Mobile First approach can also be used
+  @include responsive.large {
+    background-color: rgb(87, 208, 255);
+    max-width: 1100px;
+  }
 
-    @include responsive.medium {
-        background-color: rgb(118, 248, 118);
-        max-width: 900px;
-    }
+  @include responsive.medium {
+    background-color: rgb(118, 248, 118);
+    max-width: 900px;
+  }
 
-    @include responsive.small {
-        background-color: rgb(255, 198, 92);
-        max-width: 600px;
-    }
+  @include responsive.small {
+    background-color: rgb(255, 198, 92);
+    max-width: 600px;
+  }
+
+  .content {
+    flex: 1;
+  }
 }
 
 // We'll have 3 breakpoints for 3 different screen sizes: Small, Medium, Large
