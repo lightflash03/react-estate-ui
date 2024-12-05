@@ -1,0 +1,84 @@
+@use "../../responsive.scss" as responsive;
+
+.type {
+  button {
+    padding: 16px 36px;
+    border: 2px solid black;
+    background-color: white;
+    border-bottom: none;
+    cursor: pointer;
+
+    // TODO: Understand what & operations mean in CSS
+    &.active {
+      background-color: black;
+      color: white;
+    }
+
+    &:first-child {
+      border-top-left-radius: 5px;
+
+      @include responsive.small {
+        border: 2px solid black;
+      }
+    }
+    &:last-child {
+      border-top-right-radius: 5px;
+
+      @include responsive.small {
+        border: 2px solid black;
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  border: 2px solid black;
+  justify-content: space-between;
+  height: 64px;
+
+  @include responsive.small {
+    flex-direction: column;
+    border: none;
+    // align-items: ;
+  }
+
+  input {
+    border: none;
+    padding: 0px 10px;
+    width: 175px;
+
+    @include responsive.large {
+      &:nth-child(2), &:nth-child(3) {
+        width: 100px;
+      }
+    }
+
+    @include responsive.medium {
+      &:nth-child(1) {
+        flex: 2;
+      }
+    }
+
+    @include responsive.small {
+      width: auto;
+      padding: 20px;
+      border: 2px solid black;
+      margin: 5px;
+      &:nth-child(2), &:nth-child(3) {
+        width: auto;
+      }
+    }
+  }
+
+  button {
+    border: none;
+    background-color: gold;
+    cursor: pointer;
+    flex: 1;
+
+    @include responsive.small {
+      padding: 10px;
+    }
+  }
+}
